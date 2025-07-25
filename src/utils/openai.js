@@ -14,7 +14,7 @@ Suggest 3 to 5 unique, buildable project ideas. For each idea, include:
 - Short description
 - Suggested tech stack
 - Difficulty (Easy, Medium, Hard)
-- Why it's appropriate for a ${experience} level developer
+- Why it's appropriate for a ${experienceLevel} level developer
     `;
 
   const response = await axios.post(
