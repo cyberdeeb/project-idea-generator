@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function InputForm({ onGenerate }) {
+export default function InputForm({ onGenerate, isLoading }) {
   const [skills, setSkills] = useState('');
   const [interests, setInterests] = useState('');
   const [time, setTime] = useState('');
@@ -22,7 +22,7 @@ export default function InputForm({ onGenerate }) {
       <input
         type="text"
         placeholder="Your skills"
-        className="input w-full"
+        className="mt-4 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         value={skills}
         onChange={(e) => setSkills(e.target.value)}
         required
@@ -31,7 +31,7 @@ export default function InputForm({ onGenerate }) {
       <input
         type="text"
         placeholder="Your interests"
-        className="input w-full"
+        className="mt-4 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         value={interests}
         onChange={(e) => setInterests(e.target.value)}
         required
@@ -40,14 +40,14 @@ export default function InputForm({ onGenerate }) {
       <input
         type="text"
         placeholder="Timing (e.g. 1 week)"
-        className="input w-full"
+        className="mt-4 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         value={time}
         onChange={(e) => setTime(e.target.value)}
         required
         aria-label="Your time constraint"
       />
       <select
-        className="input w-full"
+        className="mt-4 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         value={experienceLevel}
         onChange={(e) => setExperienceLevel(e.target.value)}
         required
@@ -59,8 +59,14 @@ export default function InputForm({ onGenerate }) {
         <option value="wizard">Wizard</option>
       </select>
       <div className="flex gap-4 justify-center">
-        <button type="submit" className="btn btn-primary cursor-pointer">
-          Generate Ideas
+        <button
+          type="submit"
+          disabled={isLoading}
+          className={`${
+            isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+          } bg-blue-600 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]`}
+        >
+          {isLoading ? 'Generating...' : 'Generate'}
         </button>
       </div>
     </form>

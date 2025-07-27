@@ -39,21 +39,30 @@ export default function IdeaCard({ idea }) {
   };
 
   return (
-    <div className="bg-white border shadow p-4 rounded">
-      <h2 className="text-xl font-semibold">{idea.title}</h2>
+    <div className="bg-[#3A3A3A] text-[#F9FAFB] p-6 rounded-2xl shadow-lg border border-[#4B5563] font-inter transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-[#60A5FA]">
+      <h2 className="text-xl font-semibold font-poppins">{idea.title}</h2>
       <p className="mt-2">{idea.description}</p>
-      <p className="text-sm mt-2">
-        <strong>Tech Stack:</strong>
-        {idea.stack}
+      <p className="text-sm mt-2 border-t border-slate-600 pt-2">
+        <strong>Tech Stack:</strong> {idea.stack}
       </p>
-      <p className="text-sm">
+      <p className="text-sm mt-2 border-t border-slate-600 pt-2">
         <strong>Difficulty:</strong>
-        {idea.difficulty}
+        <span
+          className={`ml-1 px-2 py-1 rounded-full text-xs font-semibold ${
+            idea.difficulty === 'Easy'
+              ? 'bg-green-600 text-white'
+              : idea.difficulty === 'Medium'
+              ? 'bg-yellow-500 text-black'
+              : 'bg-red-600 text-white'
+          }`}
+        >
+          {idea.difficulty}
+        </span>
       </p>
 
-      <div className="mt-4 flex gap-4">
+      <div className="mt-6 flex gap-4">
         <button
-          className="bg-red-600 text-ivory py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+          className="bg-[#60A5FA] text-white py-3 px-6 rounded font-medium transition-all duration-300 hover:bg-[#3B82F6] hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] hover:-translate-y-0.5 cursor-pointer"
           onClick={handleSave}
         >
           Save Idea
@@ -62,11 +71,12 @@ export default function IdeaCard({ idea }) {
           href="https://codesandbox.io/s/new"
           target="_blank"
           rel="noreferrer"
-          className="border border-red-500/50 text-ivory py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-red-500/10"
+          className="border border-[#60A5FA] text-[#60A5FA] py-3 px-6 rounded font-medium transition-all duration-300 hover:bg-[#3B82F6]/10 hover:shadow-[0_0_15px_rgba(96,165,250,0.4)] hover:-translate-y-0.5 cursor-pointer"
         >
           Start Building
         </a>
       </div>
+
       <Toast message={toastMessage} type={toastType} show={showToast} />
     </div>
   );
