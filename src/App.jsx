@@ -3,6 +3,7 @@ import { generateProjects } from './utils/openai';
 import { parseIdeas } from './utils/parseIdeas';
 import InputForm from './components/InputForm';
 import IdeaCard from './components/IdeaCard';
+import { Loading } from './components/Loading';
 import './App.css';
 import './index.css';
 
@@ -32,7 +33,7 @@ function App() {
           What should I Work On?
         </h1>
         <InputForm onGenerate={handleGeneration} />
-        {isLoading && <p className="text-center mt-6">Generating ideas</p>}
+        {isLoading && <Loading />}
 
         <div className="space-y-4 mt-6">
           {ideas.map((idea, index) => (
