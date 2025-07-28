@@ -50,7 +50,53 @@ Throughout my learning experience, I often found myself spending more time searc
 - **Frontend:** React + Tailwind CSS
 - **Backend:** Node.js + Express
 - **AI:** OpenAI GPT-3.5 API
-- **Hosting:** Coming soon!
+- **Hosting:** Render
+
+---
+
+## Run it Locally
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/cyberdeeb/project-idea-generator.git
+cd project-idea-generator
+```
+
+### 2. Install Dependencies
+
+```bash
+cd project-idea-generator-frontend
+npm install
+
+cd ../project-idea-generator-backend
+npm install
+```
+
+### 3. Set Up Environment Variables
+
+In the backend folder, create a `.env` file:
+
+```ini
+OPENAI_API_KEY=your_openai_api_key
+```
+
+### 4. Run the Project
+
+Start the backend:
+
+```bash
+npm run dev
+```
+
+In a new terminal, start the frontend:
+
+```bash
+cd ../project-idea-generator-frontend
+npm run dev
+```
+
+Then go to [http://localhost:5173](http://localhost:5173)
 
 ---
 
