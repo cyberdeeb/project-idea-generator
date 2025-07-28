@@ -79,7 +79,6 @@ export default function IdeaCard({ idea }) {
           Start Building
         </a>
       </div>
-      // Toast notification for feedback
       <Toast message={toastMessage} type={toastType} show={showToast} />
     </div>
   );

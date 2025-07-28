@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRef } from 'react';
 import { generateProjects } from '../utils/openai';
 import { parseIdeas } from '../utils/parseIdeas';
 import InputForm from '../components/InputForm';
@@ -13,6 +14,8 @@ export default function Home() {
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState('success');
   const [showToast, setShowToast] = useState(false);
+  // Ref to manage the result section for smooth scrolling
+  const resultRef = useRef(null);
 
   // Function to handle project idea generation
   const handleGeneration = async (formData) => {
@@ -27,6 +30,11 @@ export default function Home() {
       setToastMessage('Project ideas generated successfully!');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 2500);
+      resultRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
     } catch (err) {
       console.error('Error generating ideas:', err);
       setToastType('error');
@@ -56,7 +64,7 @@ export default function Home() {
           <Loading />
         </div>
       )}
-      <div className="space-y-4 mt-12">
+      <div className="space-y-4 mt-12" ref={resultRef}>
         {ideas.length > 0 && (
           <h2 className="text-2xl font-semibold text-center mt-12 mb-5 text-gray-700">
             Your Generated Project Ideas
