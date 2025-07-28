@@ -1,18 +1,18 @@
-# 💡 What Should I Work On?
+# What Should I Work On?
 
 Instantly generate personalized and buildable project ideas tailored to your skills, interests, experience level, and availability.
 
 ---
 
-## 🚀 Inspiration
+## Inspiration
 
 This project was built as part of the **Boot.dev Hackathon** and inspired by my own journey as a self-taught developer.
 
-Throughout my learning experience, I often found myself spending more time searching for unique and meaningful project ideas than actually building them. I created this tool to help learners like myself cut through the noise and get inspired faster — whether you're prepping a portfolio, hacking at a hackathon, or just trying to learn something new.
+Throughout my learning experience, I often found myself spending more time searching for unique and meaningful project ideas than actually building them. I created this tool to help learners like myself cut through the noise and get inspired faster; whether you're prepping a portfolio, hacking at a hackathon, or just trying to learn something new.
 
 ---
 
-## ✨ Features
+## Features
 
 - Personalized project ideas based on:
   - Your tech stack
@@ -26,11 +26,11 @@ Throughout my learning experience, I often found myself spending more time searc
 
 ---
 
-## 📸 Preview
+## Preview
 
 ![App Screenshot](./preview.png)
 
-## 🧪 Example Inputs
+## Example Inputs
 
 - **Skills:** JavaScript, React
 - **Interests:** AI, Developer Tools
@@ -39,13 +39,13 @@ Throughout my learning experience, I often found myself spending more time searc
 
 ---
 
-## 📸 Live Demo
+## Live Demo
 
 👉 [Click here to try it live](https://project-idea-generator-frontend.onrender.com/)
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 - **Frontend:** React + Tailwind CSS
 - **Backend:** Node.js + Express
@@ -54,7 +54,7 @@ Throughout my learning experience, I often found myself spending more time searc
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - **[Boot.dev](https://boot.dev)** – for organizing the hackathon that sparked this idea
 - **[OpenAI](https://openai.com)** – for the powerful LLM API
@@ -62,7 +62,7 @@ Throughout my learning experience, I often found myself spending more time searc
 
 ---
 
-## 🙌 Author
+## Author
 
 Made by **Abraham Deeb**  
 Feel free to connect or contribute!
