@@ -11,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Endpoint to generate project ideas based on user input
 app.post('/api/generate', async (req, res) => {
   const { skills, interests, time, experienceLevel } = req.body;
   const prompt = `
@@ -28,7 +29,7 @@ Suggest 3 to 5 unique, buildable project ideas. For each idea, include and stric
 - Difficulty: Easy, Medium, or Hard
 
 Make sure each project is separated by a blank line and follows this exact format with numbered titles in bold markdown.`;
-
+  // Call OpenAI API to generate ideas
   try {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
@@ -51,7 +52,7 @@ Make sure each project is separated by a blank line and follows this exact forma
     res.status(500).json({ error: 'Failed to generate ideas.' });
   }
 });
-
+// Endpoint to get saved ideas
 app.listen(3001, () => {
   console.log('Backend running on http://localhost:3001');
 });

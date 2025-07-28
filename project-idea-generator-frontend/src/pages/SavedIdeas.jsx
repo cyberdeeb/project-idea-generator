@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import IdeaCard from '../components/IdeaCard';
 
 export default function SavedIdeas() {
+  // State to manage saved ideas
   const [savedIdeas, setSavedIdeas] = useState([]);
-
+  // Load saved ideas from localStorage on component mount
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('savedIdeas')) || [];
     setSavedIdeas(data);

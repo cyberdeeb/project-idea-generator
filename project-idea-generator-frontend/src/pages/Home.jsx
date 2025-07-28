@@ -7,12 +7,14 @@ import Toast from '../components/Toast';
 import Loading from '../components/Loading';
 
 export default function Home() {
+  // State to manage project ideas, loading state, and toast notifications
   const [ideas, setIdeas] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState('success');
   const [showToast, setShowToast] = useState(false);
 
+  // Function to handle project idea generation
   const handleGeneration = async (formData) => {
     setLoading(true);
     setIdeas([]);

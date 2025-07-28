@@ -2,10 +2,12 @@ import { useState } from 'react';
 import Toast from './Toast';
 
 export default function IdeaCard({ idea }) {
+  // State for toast notifications
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState('success');
 
+  // Function to handle saving the idea
   const handleSave = () => {
     try {
       const saved = JSON.parse(localStorage.getItem('savedIdeas')) || [];
@@ -15,7 +17,7 @@ export default function IdeaCard({ idea }) {
           savedIdea.title === idea.title &&
           savedIdea.description === idea.description
       );
-
+      // Check if the idea is already saved
       if (alreadySaved) {
         setToastMessage('This idea is already saved!');
         setToastType('info');
@@ -23,13 +25,15 @@ export default function IdeaCard({ idea }) {
         setTimeout(() => setShowToast(false), 2000);
         return;
       }
-
+      // Save the idea to localStorage
       localStorage.setItem('savedIdeas', JSON.stringify([...saved, idea]));
+      // Show success toast
       setToastMessage('This idea has been saved!');
       setToastType('success');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 2000);
     } catch (err) {
+      // Handle any errors during saving
       console.error('Error saving idea:', err);
       setToastMessage('Failed to save idea.');
       setToastType('error');
@@ -59,7 +63,6 @@ export default function IdeaCard({ idea }) {
           {idea.difficulty}
         </span>
       </p>
-
       <div className="mt-6 flex gap-4">
         <button
           className="bg-[#60A5FA] text-white py-3 px-6 rounded font-medium transition-all duration-300 hover:bg-[#3B82F6] hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] hover:-translate-y-0.5 cursor-pointer"
@@ -76,7 +79,7 @@ export default function IdeaCard({ idea }) {
           Start Building
         </a>
       </div>
-
+      // Toast notification for feedback
       <Toast message={toastMessage} type={toastType} show={showToast} />
     </div>
   );

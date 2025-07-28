@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 export default function InputForm({ onGenerate, isLoading }) {
+  // State for form inputs
   const [skills, setSkills] = useState('');
   const [interests, setInterests] = useState('');
   const [time, setTime] = useState('');
@@ -8,12 +9,12 @@ export default function InputForm({ onGenerate, isLoading }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // Validate inputs
     if (!skills.trim() || !interests.trim() || !time.trim()) {
       alert('Please fill in all fields');
       return;
     }
-
+    // Call the onGenerate function passed from Home component
     onGenerate({ skills, interests, time, experienceLevel });
   };
 

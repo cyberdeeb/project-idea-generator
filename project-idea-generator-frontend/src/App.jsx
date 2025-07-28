@@ -6,6 +6,7 @@ import './index.css';
 
 function App() {
   return (
+    // Router setup for navigation between Home and Saved Ideas pages
     <Router>
       <nav className="bg-[#2D2D2D] text-white py-4 px-8 flex justify-between items-center shadow-md">
         <span className="text-xl font-bold">💡 IdeaLab</span>
