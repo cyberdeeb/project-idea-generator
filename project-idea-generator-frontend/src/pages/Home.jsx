@@ -41,8 +41,10 @@ export default function Home() {
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
         What should I Work On?
       </h1>
-      <p className="text-center text-gray-600 mt-2 font-inter">
-        Get project ideas based on your skills, interests, and time.
+      <p className="text-center text-gray-600 mt-4 mb-4 max-w-xl mx-auto font-inter">
+        Instantly generate personalized and buildable project ideas tailored to
+        your skills, interests, experience level, and availability. Perfect for
+        portfolios, hackathons, or learning something new.
       </p>
       <div className="max-w-xl mx-auto mt-12 p-8 bg-white rounded-xl shadow-md border border-gray-200">
         <InputForm onGenerate={handleGeneration} isLoading={isLoading} />
@@ -63,7 +65,7 @@ export default function Home() {
         ))}
         {ideas.length === 0 && !isLoading && (
           <p className="text-center text-gray-400 mt-6 text-lg">
-            ⚡ No ideas yet – click{' '}
+            ⚡ No ideas yet, click{' '}
             <span className="font-semibold text-blue-400">Generate</span> to get
             inspired!
           </p>

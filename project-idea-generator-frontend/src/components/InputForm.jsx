@@ -19,9 +19,12 @@ export default function InputForm({ onGenerate, isLoading }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+      <h2 className="text-lg font-semibold text-gray-700 mb-4">
+        Tell us about yourself:
+      </h2>
       <input
         type="text"
-        placeholder="Your skills"
+        placeholder="Your skills e.g. JavaScript, React"
         className="mt-4 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         value={skills}
         onChange={(e) => setSkills(e.target.value)}
@@ -30,7 +33,7 @@ export default function InputForm({ onGenerate, isLoading }) {
       />
       <input
         type="text"
-        placeholder="Your interests"
+        placeholder="Your interests e.g. AI, Web Development"
         className="mt-4 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         value={interests}
         onChange={(e) => setInterests(e.target.value)}
