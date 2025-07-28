@@ -32,16 +32,16 @@ Throughout my learning experience, I often found myself spending more time searc
 
 ## 🧪 Example Inputs
 
-- **Skills:** JavaScript, React  
-- **Interests:** AI, Developer Tools  
-- **Time Available:** 1 week  
-- **Experience Level:** Intermediate  
+- **Skills:** JavaScript, React
+- **Interests:** AI, Developer Tools
+- **Time Available:** 1 week
+- **Experience Level:** Intermediate
 
 ---
 
 ## 📸 Live Demo
 
-👉 [Click here to try it live](https://live-link.com)
+👉 [Click here to try it live](https://project-idea-generator-frontend.onrender.com/)
 
 ---
 
@@ -56,9 +56,9 @@ Throughout my learning experience, I often found myself spending more time searc
 
 ## 🙌 Acknowledgements
 
-- **[Boot.dev](https://boot.dev)** – for organizing the hackathon that sparked this idea  
-- **[OpenAI](https://openai.com)** – for the powerful LLM API  
-- **[Tailwind CSS](https://tailwindcss.com)** – for quick and beautiful styling  
+- **[Boot.dev](https://boot.dev)** – for organizing the hackathon that sparked this idea
+- **[OpenAI](https://openai.com)** – for the powerful LLM API
+- **[Tailwind CSS](https://tailwindcss.com)** – for quick and beautiful styling
 
 ---
 
