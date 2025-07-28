@@ -96,7 +96,7 @@ cd ../project-idea-generator-frontend
 npm run dev
 ```
 
-Then go to [http://localhost:5173](http://localhost:5173)
+Then go to [http://localhost:3001](http://localhost:3001)
 
 ---
 
